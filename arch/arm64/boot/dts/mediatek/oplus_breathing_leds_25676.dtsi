@@ -1,0 +1,48 @@
+&i2c4 {
+	status = "ok";
+	clock-frequency = <400000>;
+	aw2027@64 {
+		compatible = "awinic,aw2027_led";
+		reg = <0x64>;
+		vbled-enable-gpio = <&pio 148 0x1>;
+
+		aw2027,red {
+			aw2027,name = "red";
+			aw2027,id = <0>;
+			aw2027,imax = <1>;
+			aw2027,led_default_trigger = "none";
+			aw2027,brightness = <0>;
+			aw2027,max-brightness = <15>;
+			aw2027,rise-time-ms = <6>;
+			aw2027,hold-time-ms = <0>;
+			aw2027,fall-time-ms = <6>;
+			aw2027,off-time-ms = <0>;
+		};
+
+		aw2027,green {
+			aw2027,name = "green";
+			aw2027,id = <1>;
+			aw2027,imax = <1>;
+			aw2027,led_default_trigger = "none";
+			aw2027,brightness = <0>;
+			aw2027,max-brightness = <15>;
+			aw2027,rise-time-ms = <6>;
+			aw2027,hold-time-ms = <0>;
+			aw2027,fall-time-ms = <6>;
+			aw2027,off-time-ms = <0>;
+		};
+
+		aw2027,blue {
+			aw2027,name = "blue";
+			aw2027,id = <2>;
+			aw2027,imax = <1>;
+			aw2027,led_default_trigger = "none";
+			aw2027,brightness = <0>;
+			aw2027,max-brightness = <15>;
+			aw2027,rise-time-ms = <6>;
+			aw2027,hold-time-ms = <0>;
+			aw2027,fall-time-ms = <6>;
+			aw2027,off-time-ms = <0>;
+		};
+	};
+};
